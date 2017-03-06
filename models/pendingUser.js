@@ -1,0 +1,25 @@
+const mongoose = require("mongoose");
+const Schema   = mongoose.Schema;
+
+const pendingUserSchema = new Schema({
+  username      : String,
+  password      : String,
+  name          : String,
+  email         : String,
+  travellerType : String,
+  description   : String,
+  foundUsHow    : String,
+  isDisclaimer  : Boolean,
+  approved      : Boolean,
+  role          : {type: String, enum : ['User', 'Admin'],
+    default: 'User'}
+},
+{
+  timestamps    : {
+    createdAt: "created_at",
+    updatedAt: "updated_at"
+  }
+});
+
+const PendingUser = mongoose.model("PendingUser", pendingUserSchema);
+module.exports = PendingUser;
