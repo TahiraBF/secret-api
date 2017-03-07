@@ -5,7 +5,6 @@ const userSchema = new Schema({
   username      : String,
   password      : String,
   name          : String,
-  email         : String,
   travellerType : String,
   description   : String,
   refer         : String,
