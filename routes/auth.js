@@ -3,6 +3,7 @@ var router          = express.Router();
 var jwt             = require('jsonwebtoken');
 var jwtOptions      = require('../config/jwtOptions');
 
+
 // Our user model
 const User          = require("../models/user");
 const PendingUser          = require("../models/pendingUser");
@@ -93,6 +94,26 @@ router.post("/signup", (req, res, next) => {
   });
 });
 
+function checkRoles(role) {
+  return function(req, res, next) {
+    if (req.isAuthenticated() && req.user.role === role) {
+      return next();
+    } else {
+      res.redirect('/login');
+    }
+  };
+}
 
+router.get('/admin', checkRoles('Admin'), (req, res) => {
+
+  User.findOne({username: req.user.username}, (err, user) => {
+    if (err) {
+      res.send(err);
+    } else {
+      console.log("this user is an admin");
+      res.json(user);
+    }
+  });
+});
 
 module.exports = router;

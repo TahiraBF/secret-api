@@ -26,6 +26,9 @@ app.options('*', cors(corsOptions));
 app.use(cors(corsOptions));
 
 app.use(passport.initialize());
+
+
+
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
