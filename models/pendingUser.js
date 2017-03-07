@@ -10,7 +10,7 @@ const pendingUserSchema = new Schema({
   foundUsHow    : String,
   isDisclaimer  : Boolean,
   approved      : Boolean,
-  referredBy : {type : Schema.Types.ObjectId, ref: 'User'},
+  referredBy    : String,
   role          : {type: String, enum : ['User', 'Admin'],
     default: 'User'}
 },

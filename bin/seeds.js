@@ -21,7 +21,7 @@ const users = [
     description   : "I never go anywhere untattended by a hoard of helpers. But i can keep a secret",
     refer         : " ",
     isDisclaimer  : true,
-    role          : 'User'
+    role          : 'Admin'
 
   },
   { username      : "dd@fruit.com",
