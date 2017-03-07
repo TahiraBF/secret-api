@@ -4,10 +4,9 @@ mongoose.connect('mongodb://localhost/secret-place');
 
 
 const users = [
-  { username      : "FruitLoop",
+  { username      : "Loop@fruit.com",
     password      : "123",
     name          : "Fruit",
-    email         : "Loop@fruit.com",
     travellerType : "Nomad",
     description   : "I have been travelling from longer than I could walk.",
     refer         : "brutus@is.com",
@@ -15,10 +14,9 @@ const users = [
     role          : 'User'
 
   },
-  { username      : "Miss Priss",
+  { username      : "p@p.com",
     password      : "123",
     name          : "Prissy",
-    email         : "p@p.com",
     travellerType : "Lujo",
     description   : "I never go anywhere untattended by a hoard of helpers. But i can keep a secret",
     refer         : " ",
@@ -26,10 +24,9 @@ const users = [
     role          : 'User'
 
   },
-  { username      : "DaveD",
+  { username      : "dd@fruit.com",
     password      : "123",
     name          : "Dave",
-    email         : "dd@fruit.com",
     travellerType : "Budget",
     description   : "I travelled across asia with nothing more than $4 in my pocket and flip-flops.",
     refer         : "anniehall@is.com",
@@ -54,6 +51,6 @@ User.create(users, (err, docs)=> {
 
   docs.forEach( (user)=>{
 		console.log(user.username);
-  })
+  });
   mongoose.connection.close();
 });
