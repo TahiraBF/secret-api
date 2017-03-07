@@ -44,15 +44,6 @@ router.post("/login", function(req, res) {
   });
 });
 
-router.get('/admin', function(req, res) {
-  var admin = req.user.role;
-
-  if (admin === "Admin") {
-    res.json({message: "Is admin"});
-  } else {
-    res.status(401).json({message: "Not admin"});
-  }
-});
 
 
 router.post("/signup", (req, res, next) => {
@@ -126,5 +117,15 @@ router.get('/admin', checkRoles('Admin'), (req, res) => {
     }
   });
 });
+
+// router.get('/admin', function(req, res) {
+//   var admin = req.user.role;
+//
+//   if (admin === "Admin") {
+//     res.json({message: "Is admin"});
+//   } else {
+//     res.status(401).json({message: "Not admin"});
+//   }
+// });
 
 module.exports = router;

@@ -5,7 +5,7 @@ mongoose.connect('mongodb://localhost/secret-place');
 
 const users = [
   { username      : "Loop@fruit.com",
-    password      : "123",
+    password      : bcrypt.hashSync("123", salt),
     name          : "Fruit",
     travellerType : "Nomad",
     description   : "I have been travelling from longer than I could walk.",
@@ -35,12 +35,6 @@ const users = [
 
   },
 ];
-
-
-
-
-
-
 
 
 
