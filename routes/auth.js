@@ -37,23 +37,12 @@ router.post("/login", function(req, res) {
         } else {
           var payload = {id: user._id};
           var token = jwt.sign(payload, jwtOptions.secretOrKey);
-          res.json({message: "ok", token: token});
+          res.json({message: "ok", token: token, user: user});
         }
       });
     }
   });
 });
-
-router.get('/admin', function(req, res) {
-  var admin = req.user.role;
-
-  if (admin === "Admin") {
-    res.json({message: "Is admin"});
-  } else {
-    res.status(401).json({message: "Not admin"});
-  }
-});
-
 
 router.post("/signup", (req, res, next) => {
   var username      = req.body.username;
@@ -98,7 +87,7 @@ router.post("/signup", (req, res, next) => {
         var payload = {id: user._id};
         console.log('user', user);
         var token = jwt.sign(payload, jwtOptions.secretOrKey);
-        res.status(200).json({message: "ok", token: token});
+        res.status(200).json({message: "ok", token: token, user: user});
       	// res.status(200).json(user);
       }
     });
