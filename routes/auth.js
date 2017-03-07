@@ -5,6 +5,7 @@ var jwtOptions      = require('../config/jwtOptions');
 
 // Our user model
 const User          = require("../models/user");
+const PendingUser          = require("../models/pendingUser");
 
 // Bcrypt let us encrypt passwords
 const bcrypt        = require("bcrypt");
@@ -43,13 +44,17 @@ router.post("/login", function(req, res) {
 });
 
 router.post("/signup", (req, res, next) => {
-  var username    = req.body.username;
-  var password    = req.body.password;
-  var name        = req.body.name;
-  var isDisclaimer = req.body.isDisclaimer;
+  var username      = req.body.username;
+  var password      = req.body.password;
+  var name          = req.body.name;
+  var travellerType = req.body.travellerType;
+  var description   = req.body.description;
+  var referredBy    = req.body.referredBy;
+  var isDisclaimer  = req.body.isDisclaimer;
+  var foundUsHow    = req.body.foundUsHow;
 
 
-  if (!username || !password || !name || !isDisclaimer) {
+  if (!username || !password || !name || !isDisclaimer || !description) {
     res.status(400).json({ message: "Please fill in all of the fields" });
     return;
   }
@@ -63,8 +68,14 @@ router.post("/signup", (req, res, next) => {
     var salt     = bcrypt.genSaltSync(bcryptSalt);
     var hashPass = bcrypt.hashSync(password, salt);
 
-    var newUser = User({
+    var newUser = PendingUser({
       username,
+      name,
+      travellerType,
+      description,
+      foundUsHow,
+      isDisclaimer,
+      referredBy,
       password: hashPass
     });
 
