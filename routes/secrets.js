@@ -2,6 +2,7 @@ var express       = require('express');
 var router        = express.Router();
 const User        = require("../models/user");
 const Secret      = require("../models/secret");
+const upload      = require('../config/multer');
 
 
 router.get('/', (req, res, next) => {
@@ -10,7 +11,6 @@ router.get('/', (req, res, next) => {
       if (err) {
         return res.send(err);
       }
-      console.log("secret is ", Secrets);
       return res.json(Secrets);
     });
 });
@@ -24,6 +24,7 @@ router.post('/add',  (req, res, next) => {
     description : req.body.description,
     tips        : req.body.tips,
     when        : req.body.when,
+    image       : `/uploads/${req.file.filename}`,
     user        : res.locals.currentUser
   });
 

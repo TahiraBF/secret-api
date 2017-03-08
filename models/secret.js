@@ -8,7 +8,8 @@ const secretSchema = new Schema({
   description : String,
   tips        : String,
   when        : Date,
-  user        : {type : Schema.Types.ObjectId, ref: 'User'},
+  picture     : { type : String, default : ''},
+  user        : { type : Schema.Types.ObjectId, ref: 'User'},
 
 },
 {
