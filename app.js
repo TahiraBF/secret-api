@@ -9,7 +9,8 @@ const passport   = require('./config/passport');
 
 var auth         = require('./routes/auth');
 var index        = require('./routes/index');
-var profile        = require('./routes/profile');
+var profile      = require('./routes/profile');
+var secrets      = require('./routes/secrets');
 var cors         = require('cors');
 
 
@@ -41,7 +42,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/', auth);
 app.use('/api/profile', profile);
-// app.use('/api/secret', passport.authenticate('jwt', { session: false }), secret);
+app.use('/api/secrets', secrets);
+// app.use('/api/secrets', passport.authenticate('jwt', { session: false }), secrets);
 
 
 // catch 404 and forward to error handler
