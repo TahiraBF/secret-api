@@ -6,7 +6,7 @@ var jwtOptions      = require('../config/jwtOptions');
 
 // Our user model
 const User          = require("../models/user");
-const PendingUser          = require("../models/pendingUser");
+const PendingUser   = require("../models/pendingUser");
 
 // Bcrypt let us encrypt passwords
 const bcrypt        = require("bcrypt");
@@ -112,20 +112,10 @@ router.get('/admin', checkRoles('Admin'), (req, res) => {
     if (err) {
       res.send(err);
     } else {
-      console.log("this user is an admin");
       res.json(user);
     }
   });
 });
 
-// router.get('/admin', function(req, res) {
-//   var admin = req.user.role;
-//
-//   if (admin === "Admin") {
-//     res.json({message: "Is admin"});
-//   } else {
-//     res.status(401).json({message: "Not admin"});
-//   }
-// });
 
 module.exports = router;
