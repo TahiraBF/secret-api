@@ -3,6 +3,7 @@ var router        = express.Router();
 const User        = require("../models/user");
 const PendingUser = require("../models/pendingUser");
 const Secret      = require("../models/secret");
+const Picture     = require("../models/picture");
 const mongoose    = require('mongoose');
 const upload = require('../config/multer');
 
@@ -42,6 +43,7 @@ router.post('/:id', function(req, res, next) {
           travellerType : user.travellerType,
           description : user.description,
           refer : " ",
+          profilePic: " ",
           isDisclaimer: true,
           role: 'User'
         });
@@ -72,14 +74,49 @@ router.delete('/:id', (req, res) => {
   });
 });
 
+router.post('/', upload.single('file'), function(req, res) {
+  var userId = req.user._id;
+  console.log("put:", userId);
+
+  User.findByIdAndUpdate(userId, {
+    profilePic: `/uploads/${req.file.filename}`,
+  }, (err) => {
+    if (err) {
+      return res.send(err);
+    } else {
+      return res.json({
+        message: 'Profile pic updated successfully'
+      });
+    }
+
+  // var profilePic = Picture({
+  //   pic_path: `/uploads/${req.file.filename}`,
+  //   pic_name: req.file.originalname,
+	// 	user: userId,
+  //   profile: true
+  // });
+  //
+  // profilePic.save((err)=> {
+  //   if (err){
+  //     res.send(err)
+  //   } else {
+  //     console.log("Im here");
+  //     return res.json({
+  //     message: 'Profile picture saved successfully'
+  //     });
+  //   }
+  // });
+  });
+});
+
 router.put('/', function(req, res) {
   var userId = req.body._id;
-  console.log("put:", userId);
 
   User.findByIdAndUpdate(userId, {
     username: req.body.username,
     name: req.body.name,
     travellerType: req.body.travellerType,
+    profilePic: " ",
     description: req.body.description
   }, (err) => {
     if (err) {

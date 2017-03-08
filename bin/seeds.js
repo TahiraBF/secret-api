@@ -1,6 +1,8 @@
 const mongoose     = require('mongoose');
 const User         = require('../models/user');
 const Secret         = require('../models/secret');
+const Picture         = require('../models/picture');
+
 mongoose.connect('mongodb://localhost/secret-place');
 const bcrypt        = require("bcrypt");
 const bcryptSalt    = 10;
@@ -17,6 +19,7 @@ const users = [
   travellerType : "Nomad",
   description   : "I have been travelling from longer than I could walk.",
   refer         : "brutus@is.com",
+  profilePic    : " ",
   isDisclaimer  : true,
   role          : 'User'
 
@@ -28,6 +31,7 @@ name          : "Prissy",
 travellerType : "Lujo",
 description   : "I never go anywhere untattended by a hoard of helpers. But i can keep a secret",
 refer         : " ",
+profilePic    : " ",
 isDisclaimer  : true,
 role          : 'Admin'
 
@@ -39,6 +43,7 @@ name          : "Dave",
 travellerType : "Budget",
 description   : "I travelled across asia with nothing more than $4 in my pocket and flip-flops.",
 refer         : "anniehall@is.com",
+profilePic    : " ",
 isDisclaimer  : true,
 role          : 'User'
 
@@ -77,6 +82,15 @@ user: "58bed89570ba4033c16c5ef0"
 }
 ];
 
+// const pictures = [
+//   {
+//     pic_path: '/uploads/1489009898799.JPG',
+//     pic_name: "luft",
+//   	user: "58bed614f23e9c706c604fbc",
+//     profile: true
+//   }
+// ];
+
 
 
 User.create(users, (err, docs)=> {
@@ -88,14 +102,23 @@ User.create(users, (err, docs)=> {
       console.log(user.username);
     });
 
-    Secret.create(secrets, (err, posts)=> {
-      if (err){
-        throw(err);}
-
-        posts.forEach( (secret)=>{
-
-          console.log(secret.where);
-        });
-        mongoose.connection.close();
-      });
+Secret.create(secrets, (err, posts)=> {
+  if (err){
+    throw(err);
+  }
+    posts.forEach( (secret)=>{
+      console.log(secret.where);
     });
+    mongoose.connection.close();
+    });
+});
+
+// Picture.create(pictures, (err, pics)=> {
+//   if (err){
+//     throw(err);
+//   }
+//     pics.forEach( (pic)=>{
+//       console.log(pic.pic_name);
+//     });
+//     mongoose.connection.close();
+// });

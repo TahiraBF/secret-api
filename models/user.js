@@ -8,6 +8,7 @@ const userSchema = new Schema({
   travellerType : String,
   description   : String,
   refer         : String,
+  profilePic    : String,
   isDisclaimer  : Boolean,
   role          : {type: String,
                    enum : ['User', 'Admin'],
