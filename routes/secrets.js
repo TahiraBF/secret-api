@@ -15,16 +15,16 @@ router.get('/', (req, res, next) => {
     });
 });
 
-router.post('/',  (req, res, next) => {
+router.post('/add',  (req, res, next) => {
 
-  const addSecret = new Secret ({
+  const addSecret =  Secret ({
     where       : req.body.where,
     location    : req.body.location,
     what        : req.body.what,
     description : req.body.description,
     tips        : req.body.tips,
     when        : req.body.when,
-    user        : req.body.user
+    user        : res.locals.currentUser
   });
 
 
