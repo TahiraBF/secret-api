@@ -15,17 +15,16 @@ router.get('/', (req, res, next) => {
     });
 });
 
-router.post('/secrets',  (req, res, next) => {
+router.post('/',  (req, res, next) => {
 
-  const addSecret = Secret ({
-    where,
-    location,
-    what,
-    description,
-    tips,
-    when,
-    user
-
+  const addSecret = new Secret ({
+    where       : req.body.where,
+    location    : req.body.location,
+    what        : req.body.what,
+    description : req.body.description,
+    tips        : req.body.tips,
+    when        : req.body.when,
+    user        : req.body.user
   });
 
 
@@ -33,7 +32,8 @@ router.post('/secrets',  (req, res, next) => {
     if (err) {
       res.status(400).json({ message: err });
     } else {
-
+      console.log("new secret ", addSecret);
+      return res.json({ message: 'New secret created!' });
     }
   });
 });
