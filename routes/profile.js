@@ -4,6 +4,8 @@ const User        = require("../models/user");
 const PendingUser = require("../models/pendingUser");
 const Secret      = require("../models/secret");
 const mongoose    = require('mongoose');
+const upload = require('../config/multer');
+
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -26,10 +28,6 @@ router.get('/:id', (req, res, next) => {
       res.json(user);
     }
   });
-});
-
-router.delete('/', function(req, res, next) {
-
 });
 
 router.post('/:id', function(req, res, next) {
@@ -74,5 +72,24 @@ router.delete('/:id', (req, res) => {
   });
 });
 
+router.put('/', function(req, res) {
+  var userId = req.body._id;
+  console.log("put:", userId);
+
+  User.findByIdAndUpdate(userId, {
+    username: req.body.username,
+    name: req.body.name,
+    travellerType: req.body.travellerType,
+    description: req.body.description
+  }, (err) => {
+    if (err) {
+      return res.send(err);
+    } else {
+      return res.json({
+        message: 'User updated successfully'
+      });
+    }
+  });
+});
 
 module.exports = router;
