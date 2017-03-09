@@ -100,8 +100,10 @@ router.put('/', function(req, res) {
     username: req.body.username,
     name: req.body.name,
     travellerType: req.body.travellerType,
-    profilePic: null,
-    description: req.body.description
+    description: req.body.description,
+    refer: req.body.refer,
+    profilePic: null
+
   }, (err) => {
     if (err) {
       return res.send(err);
@@ -112,5 +114,16 @@ router.put('/', function(req, res) {
     }
   });
 });
+
+// REFER A USER
+// router.get('/refer', function(req, res) {
+//   console.log("ref", req.user.refer);
+//   if(err){
+//     console.log("error");
+//     return res.send(err);
+//   } else {
+//     return res.json({ message: 'referral added'});
+//   }
+// });
 
 module.exports = router;
