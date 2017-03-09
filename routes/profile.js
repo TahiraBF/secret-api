@@ -17,7 +17,7 @@ router.get('/', function(req, res, next) {
     if (err) {
       res.send(err);
     } else {
-      res.status(200).json({pendingUsers : pendingUsers, user: user});
+      res.status(200).json(pendingUsers);
     }
   });
 });
@@ -45,7 +45,6 @@ router.post('/:id', function(req, res, next) {
           name : user.name,
           travellerType : user.travellerType,
           description : user.description,
-          refer : " ",
           profilePic: null,
           isDisclaimer: true,
           role: 'User'
@@ -104,7 +103,6 @@ router.put('/', function(req, res) {
     name: req.body.name,
     travellerType: req.body.travellerType,
     description: req.body.description,
-    refer: req.body.refer,
     profilePic: null
 
   }, (err) => {

@@ -7,7 +7,6 @@ const userSchema = new Schema({
   name          : String,
   travellerType : String,
   description   : String,
-  refer         : String,
   profilePic    : String,
   isDisclaimer  : Boolean,
   role          : {type: String,
