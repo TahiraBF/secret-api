@@ -11,8 +11,6 @@ const upload = require('../config/multer');
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   var user = req.user;
-  console.log("current:", user);
-
   PendingUser.find({}, (err, pendingUsers)=> {
     if (err) {
       res.send(err);
@@ -79,7 +77,7 @@ router.delete('/:id', (req, res) => {
 
 router.post('/', upload.single('file'), function(req, res) {
   var userId = req.user._id;
-  var user = req.user;
+  var user = req.body;
 
   User.findByIdAndUpdate(userId, {
     profilePic: `/uploads/${req.file.filename}`,
@@ -97,7 +95,6 @@ router.post('/', upload.single('file'), function(req, res) {
 router.put('/', function(req, res) {
   var userId = req.body._id;
   var user = req.body;
- console.log("current:", user);
 
   User.findByIdAndUpdate(userId, {
     username: req.body.username,
