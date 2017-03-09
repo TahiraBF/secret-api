@@ -1,5 +1,6 @@
 var express       = require('express');
 var router        = express.Router();
+const mongoose    = require('mongoose');
 const User        = require("../models/user");
 const Secret      = require("../models/secret");
 const upload      = require('../config/multer');
@@ -15,9 +16,9 @@ router.get('/', (req, res, next) => {
     });
 });
 
-router.post('/add',  (req, res, next) => {
+router.post('/add', upload.single('file'), (req, res, next) => {
 
-  const addSecret =  Secret ({
+  const addSecret =  new Secret ({
     where       : req.body.where,
     location    : req.body.location,
     what        : req.body.what,
@@ -33,7 +34,6 @@ router.post('/add',  (req, res, next) => {
     if (err) {
       res.status(400).json({ message: err });
     } else {
-      console.log("new secret ", addSecret);
       return res.json({ message: 'New secret created!' });
     }
   });
