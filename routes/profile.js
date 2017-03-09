@@ -10,11 +10,14 @@ const upload = require('../config/multer');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
+  var user = req.user;
+  console.log("current:", user);
+
   PendingUser.find({}, (err, pendingUsers)=> {
     if (err) {
       res.send(err);
     } else {
-      res.json(pendingUsers);
+      res.status(200).json({pendingUsers : pendingUsers, user: user});
     }
   });
 });
@@ -43,7 +46,7 @@ router.post('/:id', function(req, res, next) {
           travellerType : user.travellerType,
           description : user.description,
           refer : " ",
-          profilePic: " ",
+          profilePic: null,
           isDisclaimer: true,
           role: 'User'
         });
@@ -76,71 +79,54 @@ router.delete('/:id', (req, res) => {
 
 router.post('/', upload.single('file'), function(req, res) {
   var userId = req.user._id;
-  console.log("put:", userId);
+  var user = req.user;
 
   User.findByIdAndUpdate(userId, {
     profilePic: `/uploads/${req.file.filename}`,
-  }, (err) => {
+  }, (err, userPic) => {
     if (err) {
       return res.send(err);
     } else {
       return res.json({
-        message: 'Profile pic updated successfully'
+        message: 'Profile pic updated successfully', user: user
       });
     }
-
-  // var profilePic = Picture({
-  //   pic_path: `/uploads/${req.file.filename}`,
-  //   pic_name: req.file.originalname,
-	// 	user: userId,
-  //   profile: true
-  // });
-  //
-  // profilePic.save((err)=> {
-  //   if (err){
-  //     res.send(err)
-  //   } else {
-  //     console.log("Im here");
-  //     return res.json({
-  //     message: 'Profile picture saved successfully'
-  //     });
-  //   }
-  // });
   });
 });
 
 router.put('/', function(req, res) {
   var userId = req.body._id;
+  var user = req.body;
+ console.log("current:", user);
 
   User.findByIdAndUpdate(userId, {
     username: req.body.username,
     name: req.body.name,
     travellerType: req.body.travellerType,
-    profilePic: " ",
     description: req.body.description,
-    refer: req.body.refer
+    refer: req.body.refer,
+    profilePic: null
+
   }, (err) => {
     if (err) {
       return res.send(err);
     } else {
       return res.json({
-        message: 'User updated successfully'
+        message: 'User updated successfully', user: user
       });
     }
   });
 });
 
 // REFER A USER
-router.get('/refer', function(req, res) {
-  // var referArray = [ ];
-  // var refer      = req.user.refer;
-  console.log("ref", req.user.refer);
-  if(err){
-    console.log("error");
-    return res.send(err);
-  } else {
-    return res.json({ message: 'referral added'});
-  }
-});
+// router.get('/refer', function(req, res) {
+//   console.log("ref", req.user.refer);
+//   if(err){
+//     console.log("error");
+//     return res.send(err);
+//   } else {
+//     return res.json({ message: 'referral added'});
+//   }
+// });
 
 module.exports = router;

@@ -19,7 +19,7 @@ const users = [
   travellerType : "Nomad",
   description   : "I have been travelling from longer than I could walk.",
   refer         : "brutus@is.com",
-  profilePic    : " ",
+  profilePic    : null,
   isDisclaimer  : true,
   role          : 'User'
 
@@ -31,7 +31,7 @@ name          : "Prissy",
 travellerType : "Lujo",
 description   : "I never go anywhere untattended by a hoard of helpers. But i can keep a secret",
 refer         : " ",
-profilePic    : " ",
+profilePic    : null,
 isDisclaimer  : true,
 role          : 'Admin'
 
@@ -43,7 +43,7 @@ name          : "Dave",
 travellerType : "Budget",
 description   : "I travelled across asia with nothing more than $4 in my pocket and flip-flops.",
 refer         : "anniehall@is.com",
-profilePic    : " ",
+profilePic    : null,
 isDisclaimer  : true,
 role          : 'User'
 
@@ -85,6 +85,7 @@ image: " "
 }
 ];
 
+
 // const pictures = [
 //   {
 //     pic_path: '/uploads/1489009898799.JPG',
@@ -104,17 +105,18 @@ User.create(users, (err, docs)=> {
 
       console.log(user.username);
     });
-
-Secret.create(secrets, (err, posts)=> {
-  if (err){
-    throw(err);
-  }
-    posts.forEach( (secret)=>{
-      console.log(secret.where);
-    });
     mongoose.connection.close();
-    });
-});
+  });
+
+// Secret.create(secrets, (err, posts)=> {
+//   if (err){
+//     throw(err);
+//   }
+//     posts.forEach( (secret)=>{
+//       console.log(secret.where);
+//     });
+//     mongoose.connection.close();
+// });
 
 // Picture.create(pictures, (err, pics)=> {
 //   if (err){
