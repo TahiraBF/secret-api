@@ -30,7 +30,7 @@ password      : bcrypt.hashSync("123", salt),
 name          : "Prissy",
 travellerType : "Lujo",
 description   : "I never go anywhere untattended by a hoard of helpers. But i can keep a secret",
-refer         : "marta@marta.com",
+refer         : " ",
 profilePic    : " ",
 isDisclaimer  : true,
 role          : 'Admin'

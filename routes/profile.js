@@ -117,7 +117,8 @@ router.put('/', function(req, res) {
     name: req.body.name,
     travellerType: req.body.travellerType,
     profilePic: " ",
-    description: req.body.description
+    description: req.body.description,
+    refer: req.body.refer
   }, (err) => {
     if (err) {
       return res.send(err);
@@ -140,12 +141,6 @@ router.get('/refer', function(req, res) {
   } else {
     return res.json({ message: 'referral added'});
   }
-
-
-
-  // refer.push.
-
-
 });
 
 module.exports = router;
