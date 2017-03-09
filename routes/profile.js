@@ -10,11 +10,14 @@ const upload = require('../config/multer');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
+  var user = req.user;
+  console.log("current:", user);
+
   PendingUser.find({}, (err, pendingUsers)=> {
     if (err) {
       res.send(err);
     } else {
-      res.json(pendingUsers);
+      res.status(200).json({pendingUsers : pendingUsers, user: user});
     }
   });
 });
@@ -76,16 +79,16 @@ router.delete('/:id', (req, res) => {
 
 router.post('/', upload.single('file'), function(req, res) {
   var userId = req.user._id;
-  console.log("put:", userId);
+  var user = req.user;
 
   User.findByIdAndUpdate(userId, {
     profilePic: `/uploads/${req.file.filename}`,
-  }, (err) => {
+  }, (err, userPic) => {
     if (err) {
       return res.send(err);
     } else {
       return res.json({
-        message: 'Profile pic updated successfully'
+        message: 'Profile pic updated successfully', user: user
       });
     }
   });
@@ -93,6 +96,8 @@ router.post('/', upload.single('file'), function(req, res) {
 
 router.put('/', function(req, res) {
   var userId = req.body._id;
+  var user = req.body;
+ console.log("current:", user);
 
   User.findByIdAndUpdate(userId, {
     username: req.body.username,
@@ -105,7 +110,7 @@ router.put('/', function(req, res) {
       return res.send(err);
     } else {
       return res.json({
-        message: 'User updated successfully'
+        message: 'User updated successfully', user: user
       });
     }
   });
