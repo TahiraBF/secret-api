@@ -43,7 +43,7 @@ router.post('/:id', function(req, res, next) {
           travellerType : user.travellerType,
           description : user.description,
           refer : " ",
-          profilePic: " ",
+          profilePic: null,
           isDisclaimer: true,
           role: 'User'
         });
@@ -88,24 +88,6 @@ router.post('/', upload.single('file'), function(req, res) {
         message: 'Profile pic updated successfully'
       });
     }
-
-  // var profilePic = Picture({
-  //   pic_path: `/uploads/${req.file.filename}`,
-  //   pic_name: req.file.originalname,
-	// 	user: userId,
-  //   profile: true
-  // });
-  //
-  // profilePic.save((err)=> {
-  //   if (err){
-  //     res.send(err)
-  //   } else {
-  //     console.log("Im here");
-  //     return res.json({
-  //     message: 'Profile picture saved successfully'
-  //     });
-  //   }
-  // });
   });
 });
 
@@ -116,7 +98,7 @@ router.put('/', function(req, res) {
     username: req.body.username,
     name: req.body.name,
     travellerType: req.body.travellerType,
-    profilePic: " ",
+    profilePic: null,
     description: req.body.description
   }, (err) => {
     if (err) {
