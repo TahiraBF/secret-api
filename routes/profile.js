@@ -129,4 +129,23 @@ router.put('/', function(req, res) {
   });
 });
 
+// REFER A USER
+router.get('/refer', function(req, res) {
+  // var referArray = [ ];
+  // var refer      = req.user.refer;
+  console.log("ref", req.user.refer);
+  if(err){
+    console.log("error");
+    return res.send(err);
+  } else {
+    return res.json({ message: 'referral added'});
+  }
+
+
+
+  // refer.push.
+
+
+});
+
 module.exports = router;
