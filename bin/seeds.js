@@ -105,15 +105,15 @@ User.create(users, (err, docs)=> {
     mongoose.connection.close();
   });
 
-Secret.create(secrets, (err, posts)=> {
-  if (err){
-    throw(err);
-  }
-    posts.forEach( (secret)=>{
-      console.log(secret.where);
-    });
-    mongoose.connection.close();
-});
+// Secret.create(secrets, (err, posts)=> {
+//   if (err){
+//     throw(err);
+//   }
+//     posts.forEach( (secret)=>{
+//       console.log(secret.where);
+//     });
+//     mongoose.connection.close();
+// });
 
 // Picture.create(pictures, (err, pics)=> {
 //   if (err){
