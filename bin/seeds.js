@@ -67,7 +67,7 @@ const secrets = [
   tips: "This place is very hard to find online. If you can get access to their phone number, call them directly to book. Also, their address isn't on google maps so you'll need to call and ask for directions if it's your first time.",
   when: "September 2016",
   user: "58c2e8517b531c08d4eb2f60",
-  image: "https://static.pexels.com/photos/238622/pexels-photo-238622.jpeg"
+  image: "https://www.google.es/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwjR6NC2yMzSAhUGthoKHQggDzUQjRwIBw&url=http%3A%2F%2Fwww.letstravelsomewhere.com%2Ftravel-inspiration%2Fsandra-jordan-chefchaouen-morocco%2F&bvm=bv.149093890,d.d24&psig=AFQjCNE09XW_AXBuSOTB_Cvf3jo_p45RRg&ust=1489256896686697"
   },
 
 
@@ -79,18 +79,18 @@ description: "This short little hike up the San Anton mountain will without a do
 tips: "The path starts off as a road but eventually turns to gravel and dirt, so make sure you bring comfortable shoes!",
 when: "July 2016",
 user: "58bed89570ba4033c16c5ef1",
-image: "https://static.pexels.com/photos/227417/pexels-photo-227417.jpeg"
+image: "https://www.google.es/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwjxrbHDyMzSAhWFrxoKHVrDDQ0QjRwIBw&url=https%3A%2F%2Fwinetourismspain.com%2F399%2Fgetaria-from-san-sebastian-wine-and-food-tour%2F&bvm=bv.149093890,d.d24&psig=AFQjCNEGlMCBvKlN_ObDycpxdSPzaBc4eQ&ust=1489256923033262"
 },
 
 {
 where: "New Orleans, USA",
 location: "Port of Call",
-what: "Place to Eat",
+what: "Restaurant",
 description: "Amazing little restaurant located in New Orleans, Louisiana. They have the best hamburger and baked potato in the city. While you can find hurricanes just about anywhere, only Port of Call has the monsoon...make sure you get one!",
 tips: "There could be a long wait during dinner time, make sure you get there early or be prepared to wait!",
 when: "December 2016",
-user: "58bed89570ba4033c16c5ef0",
-image: " "
+user: "58c2e8517b531c08d4eb2f60",
+image: "https://www.google.es/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwjStcegx8zSAhXJfRoKHWDrCDMQjRwIBw&url=http%3A%2F%2Fsetthetrotline.com%2F2012%2F04%2F02%2Fthe-best-burger-ive-ever-had%2F&psig=AFQjCNFOlH_8rUm78zoldlVIwJMXYeWMKg&ust=1489256556787555"
 },
 
 {
@@ -101,7 +101,7 @@ description: "While I haven't seen them all, this has to be the best Fado house 
 tips: "This restaurant is located in a sketchier corner of Alfama so beware at night! I've never been robbed going to this restaurant but I have heard that it happens from time to time.",
 when: "February 2014",
 user: "58bed89570ba4033c16c5ef0",
-image: " "
+image: "https://www.google.es/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwjfobOnyMzSAhVGiRoKHVDiBzQQjRwIBw&url=https%3A%2F%2Fwww.tripadvisor.com%2FRestaurant_Review-g189106-d3847494-Reviews-Casa_De_Fados_Maria_Severa-Evora_Evora_District_Alentejo.html&bvm=bv.149093890,d.d24&psig=AFQjCNHK1iwrQii__t6mYXkhcGmINIsBCA&ust=1489256860984417"
 },
 
 {
@@ -112,7 +112,7 @@ description: "Hidden in the mountains, this \"sideria\" is truly one of a kind. 
 tips: "This place is hard to reach so you can only get there by car.",
 when: "June 2015",
 user: "58bed89570ba4033c16c5ef0",
-image: " "
+image: "https://www.google.es/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwi_qKeCyMzSAhVCiRoKHdgTCzQQjRwIBw&url=https%3A%2F%2Facademiavascadegastronomia.com%2Frestaurante%2Frekondo%2F&bvm=bv.149093890,d.d24&psig=AFQjCNGze82Bgj-WoCSwWK5cb7Z8VUdaPg&ust=1489256771711435"
 },
 
 {
@@ -123,7 +123,7 @@ description: "Great little bar with the best cocktails in Madrid! They only plac
 tips: "Thursdays are the best night to go. Avoid Saturdays as they get super packed!",
 when: "January 2017",
 user: "58bed89570ba4033c16c5ef0",
-image: " "
+image: "http://thedrinknation.com/uploads/pdx%20gt.jpg"
 },
 
 {
@@ -134,7 +134,7 @@ description: "Nice place to eat Japanese food in Barcelona. It's a small restaur
 tips: "There are two floors, the top floor is buns and the bottom floor is ramen. There are two different kitchens, however so you can only order from each floors respective kitchen. Make sure you check the menu before you sit.",
 when: "March 2017",
 user: "58bed89570ba4033c16c5ef0",
-image: " "
+image: "https://www.google.es/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwjM9JTYx8zSAhVHQBoKHX5WBDQQjRwIBw&url=http%3A%2F%2Fwww.historiasdeunabstracto.com%2F%3Fp%3D4892&bvm=bv.149093890,d.d24&psig=AFQjCNGXm-7d-u2Pq8y4diiwvggGpG0R5A&ust=1489256693504482"
 },
 
 {
@@ -145,7 +145,7 @@ description: "Cool little dive bar in the North Park neighborhood in San Diego. 
 tips: "Even though the bar closes at 2am, they usually do last call at 1:30am.",
 when: "June 2016",
 user: "58bed89570ba4033c16c5ef0",
-image: " "
+image: "https://www.google.es/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwiUm_7Jx8zSAhWCBBoKHSXSBzQQjRwIBw&url=http%3A%2F%2Fwww.sandiegoreader.com%2Fnews%2F2014%2Fjul%2F02%2Fblurt-el-dorado-rebrand%2F&bvm=bv.149093890,d.d24&psig=AFQjCNFePWdoLH3prGD0YDw4HYfxrWjFjg&ust=1489256671662342"
 },
 
 {
@@ -156,7 +156,7 @@ description: "This outdoor picnic area sells raw oysters on the half shell so yo
 tips: "This place gets packed on Saturdays and Sundays and they have limited seating so be sure to get there by 10am or expect a wait of at least 2 hours. Everything is outdoors so not a good place to go if it's raining.",
 when: "May 2015",
 user: "58bed89570ba4033c16c5ef0",
-image: " "
+image: "https://www.google.es/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwixocu_x8zSAhVKahoKHTGZBzQQjRwIBw&url=http%3A%2F%2Fwww.daytrippen.com%2Ftomales-bay-day-trip%2F&bvm=bv.149093890,d.d24&psig=AFQjCNE4BPQqfQIyf_OCI5mTS5mp3q_d8w&ust=1489256645461010"
 },
 
 {
@@ -167,7 +167,7 @@ description: "Just on the other side of Manhatten in Brooklyn, there's a little 
 tips: "The neighborhood is a bit quiet so it's hard to find a place to eat or drink outside of work hours.",
 when: "January 2016",
 user: "58bed89570ba4033c16c5ef0",
-image: " "
+image: "https://www.google.es/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwiin-TZyMzSAhUCORoKHQHgATQQjRwIBw&url=https%3A%2F%2Fbrooklyncupcake.wordpress.com%2F2013%2F04%2F24%2Fnycs-best-kept-secret-dumbo%2Fdumbo-brooklyn-bridge-013%2F&bvm=bv.149093890,d.d24&psig=AFQjCNGFRGWG3gMbqQcdLMqaezmIIUK-dA&ust=1489256955255878"
 },
 
 {
@@ -178,19 +178,9 @@ description: "Some of the best tacos you'll find in Texas. They have authentic O
 tips: "It's a taco truck so the location varies every day. Check their twitter (@dosamigostacotruck) to find out where they are that day.",
 when: "December 2016",
 user: "58bed89570ba4033c16c5ef0",
-image: " "
+image: "https://www.google.es/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwi2uq2vx8zSAhWIAxoKHdvaCDQQjRwIBw&url=http%3A%2F%2Fwww.lawyersgunsmoneyblog.com%2F2016%2F10%2Fa-wall-of-taco-trucks&bvm=bv.149093890,d.d24&psig=AFQjCNHoe2td-AS3K5xDs9Pwn5VVh36xYg&ust=1489256612209001"
 },
 
-  {
-  where: "New Orleans, USA",
-  location: "Port of Call",
-  what: "Restaurant",
-  description: "Amazing little restaurant located in New Orleans, Louisiana. They have the best hamburger and baked potato in the city. While you can find hurricanes just about anywhere, only Port of Call has the monsoon...make sure you get one!",
-  tips: "There could be a long wait during dinner time, make sure you get there early or be prepared to wait!",
-  when: "December 2016",
-  user: "58c2e8517b531c08d4eb2f60",
-  image: "http://www.brazilcarnival.com.br/upload_images/Example_Float_Brazil_Carnival_by_Alexandre_Vidal.jpg"
-  },
   {
   where: "Bogota, Colombia",
   location: "Chicó norte",
