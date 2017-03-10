@@ -10,8 +10,11 @@ const upload = require('../config/multer');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  var user = req.user;
-  PendingUser.find({}, (err, pendingUsers)=> {
+  // var user = req.user;
+  // console.log("user:", user);
+
+  PendingUser.find({})
+    .exec((err, pendingUsers)=> {
     if (err) {
       res.send(err);
     } else {
@@ -76,7 +79,10 @@ router.delete('/:id', (req, res) => {
 
 router.post('/', upload.single('file'), function(req, res) {
   var userId = req.user._id;
-  var user = req.body;
+  var user = req.user;
+  var user2 = req.body;
+  console.log("post user:", user);
+  console.log("post user2:", user2);
 
   User.findByIdAndUpdate(userId, {
     profilePic: `/uploads/${req.file.filename}`,
@@ -84,8 +90,15 @@ router.post('/', upload.single('file'), function(req, res) {
     if (err) {
       return res.send(err);
     } else {
-      return res.json({
-        message: 'Profile pic updated successfully', user: user
+      User.findOne({"_id": userId}, (err, userPic) => {
+        if (err) {
+          return res.send(err);
+        } else {
+          console.log("userPic:", userPic);
+          return res.json({
+            message: 'Profile pic updated successfully', user: userPic
+          });
+        }
       });
     }
   });
@@ -99,8 +112,7 @@ router.put('/', function(req, res) {
     username: req.body.username,
     name: req.body.name,
     travellerType: req.body.travellerType,
-    description: req.body.description,
-    profilePic: null
+    description: req.body.description
 
   }, (err) => {
     if (err) {
@@ -114,14 +126,14 @@ router.put('/', function(req, res) {
 });
 
 // REFER A USER
-// router.get('/refer', function(req, res) {
-//   console.log("ref", req.user.refer);
-//   if(err){
-//     console.log("error");
-//     return res.send(err);
-//   } else {
-//     return res.json({ message: 'referral added'});
-//   }
-// });
+router.get('/refer', function(req, res) {
+  // console.log("ref", req.user.refer);
+  // if(err){
+  //   console.log("error");
+  //   return res.send(err);
+  // } else {
+    return res.json({ message: 'referral added'});
+  // }
+});
 
 module.exports = router;
