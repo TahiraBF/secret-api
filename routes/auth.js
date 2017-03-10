@@ -7,6 +7,7 @@ var jwtOptions      = require('../config/jwtOptions');
 // Our user model
 const User          = require("../models/user");
 const PendingUser   = require("../models/pendingUser");
+const ReferredUser  = require("../models/referredUser");
 
 // Bcrypt let us encrypt passwords
 const bcrypt        = require("bcrypt");
@@ -27,9 +28,9 @@ router.post("/login", function(req, res) {
 
   User.findOne({ "username": username }, (err, user)=> {
 
-  	if( ! user ){
-	    res.status(401).json({message:"no such user found"});
-	  } else {
+    if( ! user ){
+      res.status(401).json({message:"no such user found"});
+    } else {
       bcrypt.compare(password, user.password, function(err, isMatch) {
         console.log(isMatch);
         if (!isMatch) {
@@ -89,7 +90,37 @@ router.post("/signup", (req, res, next) => {
         console.log('user', user);
         var token = jwt.sign(payload, jwtOptions.secretOrKey);
         res.status(200).json({message: "ok", token: token, user: user});
-      	// res.status(200).json(user);
+        // res.status(200).json(user);
+      }
+    });
+    ReferredUser.findOne({ refEmail: username }, (err, user) => {
+      if (user) {
+        console.log("this user has been referred");
+
+        PendingUser.findOne({ username }, (user) => {
+
+          const approvedUser = User({
+            username : user.username,
+            password : user.password,
+            name : user.name,
+            travellerType : user.travellerType,
+            description : user.description,
+            profilePic: null,
+            isDisclaimer: true,
+            role: 'User'
+          });
+
+          approvedUser.save((err, user) => {
+            if (err) {
+              res.status(400).json({ message: err });
+            } else {
+              res.status(200).json({message: "user saved"});
+            }
+          });
+        });
+      }
+      else {
+        console.log("user has not been referred");
       }
     });
   });
