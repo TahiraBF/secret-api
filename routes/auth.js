@@ -82,45 +82,43 @@ router.post("/signup", (req, res, next) => {
       password: hashPass
     });
 
-    newUser.save((err, user) => {
-      if (err) {
-        res.status(400).json({ message: err });
-      } else {
-        var payload = {id: user._id};
-        console.log('user', user);
-        var token = jwt.sign(payload, jwtOptions.secretOrKey);
-        res.status(200).json({message: "ok", token: token, user: user});
-        // res.status(200).json(user);
-      }
-    });
     ReferredUser.findOne({ refEmail: username }, (err, user) => {
       if (user) {
         console.log("this user has been referred");
 
-        PendingUser.findOne({ username }, (user) => {
+        const approvedUser = User({
+          username : req.body.username,
+          password : req.body.password,
+          name : req.body.name,
+          travellerType : req.body.travellerType,
+          description : req.body.description,
+          profilePic: null,
+          isDisclaimer: true,
+          role: 'User'
+        });
 
-          const approvedUser = User({
-            username : user.username,
-            password : user.password,
-            name : user.name,
-            travellerType : user.travellerType,
-            description : user.description,
-            profilePic: null,
-            isDisclaimer: true,
-            role: 'User'
-          });
-
-          approvedUser.save((err, user) => {
-            if (err) {
-              res.status(400).json({ message: err });
-            } else {
-              res.status(200).json({message: "user saved"});
-            }
-          });
+        approvedUser.save((err, user) => {
+          if (err) {
+            res.status(400).json({ message: err });
+          } else {
+            res.status(200).json({message: "user saved"});
+          }
         });
       }
       else {
         console.log("user has not been referred");
+
+        newUser.save((err, user) => {
+          if (err) {
+            res.status(400).json({ message: err });
+          } else {
+            var payload = {id: user._id};
+            console.log('user', user);
+            var token = jwt.sign(payload, jwtOptions.secretOrKey);
+            res.status(200).json({message: "ok", token: token, user: user});
+            // res.status(200).json(user);
+          }
+        });
       }
     });
   });
