@@ -1,12 +1,31 @@
-var express       = require('express');
-var router        = express.Router();
-const User        = require("../models/user");
-const PendingUser = require("../models/pendingUser");
-const Secret      = require("../models/secret");
-const Picture     = require("../models/picture");
-const mongoose    = require('mongoose');
-const upload = require('../config/multer');
+var express         = require('express');
+var router          = express.Router();
+const User          = require("../models/user");
+const PendingUser   = require("../models/pendingUser");
+const Secret        = require("../models/secret");
+const Picture       = require("../models/picture");
+const ReferredUser  = require("../models/referredUser");
+const mongoose      = require('mongoose');
+const upload        = require('../config/multer');
 
+
+// REFER A USER
+router.post('/refer', function(req, res) {
+
+const addReferredUser = new ReferredUser ({
+  referredBy: res.locals.currentUser,
+  refEmail  : req.body.refEmail
+});
+
+addReferredUser.save( (err) => {
+  if(err){
+    console.log("error");
+    return res.send(err);
+  } else {
+    return res.json({ message: 'referral added'});
+  }
+  });
+});
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -125,15 +144,7 @@ router.put('/', function(req, res) {
   });
 });
 
-// REFER A USER
-router.get('/refer', function(req, res) {
-  // console.log("ref", req.user.refer);
-  // if(err){
-  //   console.log("error");
-  //   return res.send(err);
-  // } else {
-    return res.json({ message: 'referral added'});
-  // }
-});
+
+
 
 module.exports = router;
