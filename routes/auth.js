@@ -71,7 +71,18 @@ router.post("/signup", (req, res, next) => {
     var salt     = bcrypt.genSaltSync(bcryptSalt);
     var hashPass = bcrypt.hashSync(password, salt);
 
-    var newUser = PendingUser({
+    var newPendingUser = PendingUser({
+      username,
+      name,
+      travellerType,
+      description,
+      foundUsHow,
+      isDisclaimer,
+      referredBy,
+      password: hashPass
+    });
+
+    var newUser = User({
       username,
       name,
       travellerType,
@@ -86,29 +97,32 @@ router.post("/signup", (req, res, next) => {
       if (user) {
         console.log("this user has been referred");
 
-        const approvedUser = User({
-          username : req.body.username,
-          password : req.body.password,
-          name : req.body.name,
-          travellerType : req.body.travellerType,
-          description : req.body.description,
-          profilePic: null,
-          isDisclaimer: true,
-          role: 'User'
-        });
+        // const approvedUser = User({
+        //   username : req.body.username,
+        //   password : req.body.password,
+        //   name : req.body.name,
+        //   travellerType : req.body.travellerType,
+        //   description : req.body.description,
+        //   profilePic: null,
+        //   isDisclaimer: true,
+        //   role: 'User'
+        // });
 
-        approvedUser.save((err, user) => {
+        newUser.save((err, user) => {
           if (err) {
             res.status(400).json({ message: err });
           } else {
-            res.status(200).json({message: "user saved"});
+            var payload = {id: user._id};
+            console.log('user', user);
+            var token = jwt.sign(payload, jwtOptions.secretOrKey);
+            res.status(200).json({message: "ok", token: token, user: user});
           }
         });
       }
       else {
         console.log("user has not been referred");
 
-        newUser.save((err, user) => {
+        newPendingUser.save((err, user) => {
           if (err) {
             res.status(400).json({ message: err });
           } else {
