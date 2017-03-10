@@ -39,4 +39,15 @@ router.post('/add', upload.single('file'), (req, res, next) => {
   });
 });
 
+router.get('/search', (req, res, next) => {
+  Secret.find({})
+    .exec((err, Secrets) => {
+      if (err) {
+        return res.send(err);
+      }
+      return res.json(Secrets);
+    });
+});
+
+
 module.exports = router;
