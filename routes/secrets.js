@@ -7,7 +7,9 @@ const upload      = require('../config/multer');
 
 
 router.get('/', (req, res, next) => {
-  Secret.find({})
+  var user = req.user._id;
+
+  Secret.find({"user": user })
     .exec((err, Secrets) => {
       if (err) {
         return res.send(err);
@@ -26,7 +28,7 @@ router.post('/add', upload.single('file'), (req, res, next) => {
     tips        : req.body.tips,
     when        : req.body.when,
     image       : `/uploads/${req.file.filename}`,
-    user        : res.locals.currentUser
+    user        : req.user._id
   });
 
 
