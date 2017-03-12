@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+var random     = require('mongoose-simple-random');
 const Schema   = mongoose.Schema;
 
 const secretSchema = new Schema({
@@ -18,6 +19,7 @@ const secretSchema = new Schema({
     updatedAt: "updated_at"
   }
 });
+secretSchema.plugin(random);
 
 const Secret = mongoose.model("Secret", secretSchema);
 module.exports = Secret;

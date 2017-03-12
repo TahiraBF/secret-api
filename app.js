@@ -5,6 +5,7 @@ var logger       = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 const passport   = require('./config/passport');
+var random       = require('mongoose-simple-random');
 
 
 var auth         = require('./routes/auth');
@@ -39,11 +40,14 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
+
+
 app.use('/', index);
 app.use('/', auth);
 // app.use('/api/profile',  profile);
+app.use('/api/secrets',  secrets);
 app.use('/api/profile', passport.authenticate('jwt', { session: false }), profile);
-app.use('/api/secrets', passport.authenticate('jwt', { session: false }), secrets);
+// app.use('/api/secrets', passport.authenticate('jwt', { session: false }), secrets);
 
 
 // catch 404 and forward to error handler
