@@ -64,7 +64,7 @@ router.post("/signup", (req, res, next) => {
 
   User.findOne({ username }, "username", (err, user) => {
     if (user !== null) {
-      res.status(400).json({ message: 'user exist' });
+      res.status(403).json({ message: 'user exist' });
       return;
     }
 
