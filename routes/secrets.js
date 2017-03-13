@@ -56,7 +56,7 @@ router.get('/search', (req, res, next) => {
 
 router.get('/featured', function(req, res, next) {
 
-  Secret.findRandom({}, {}, {limit: 5}, function(err, results) {
+  Secret.findRandom({}, {}, {limit: 4}, function(err, results) {
     if (err) {
       return res.send(err);
     } else {

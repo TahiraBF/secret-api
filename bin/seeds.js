@@ -37,7 +37,7 @@ var salt     = bcrypt.genSaltSync(bcryptSalt);
 //   {
 //   username      : "dd@fruit.com",
 //   password      : bcrypt.hashSync("abc", salt),
-//   name          : "Dave",
+//   name          : "Nate",
 //   travellerType : "Budget",
 //   description   : "I travelled across asia with nothing more than $4 in my pocket and flip-flops.",
 //   profilePic    : "https://s-media-cache-ak0.pinimg.com/736x/20/3d/59/203d59ade6a9d134cbe8ec8d045034ff.jpg",
