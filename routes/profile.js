@@ -54,7 +54,7 @@ router.get('/:id', (req, res, next) => {
   });
 });
 
-router.post('/:id', function(req, res, next) {
+router.post('/approve-users/:id', function(req, res, next) {
   PendingUser.findById(req.params.id, (err, user) => {
     if (err){
       res.send(err);
