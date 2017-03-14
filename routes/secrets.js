@@ -75,7 +75,6 @@ router.get('/:id', (req, res) => {
       return res.send(err);
     }
     else {
-      console.log("secret is ", secret.where);
     return res.json(secret);
   }
     });
