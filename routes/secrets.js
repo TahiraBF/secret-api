@@ -19,6 +19,22 @@ router.get('/', (req, res, next) => {
     });
 });
 
+router.get('/:id', (req, res) => {
+  var secretId = req.params.id;
+
+  Secret.findById(secretId, (err, secret) => {
+    if (err) {
+      return res.send(err);
+    }
+    else {
+      // console.log("secret is ", secret.where);
+    return res.json(secret);
+  }
+    });
+});
+
+
+
 router.post('/add', upload.single('file'), (req, res, next) => {
   // var userId = req.user._id;
   // console.log("user ", userid);
@@ -55,7 +71,7 @@ router.get('/search', (req, res, next) => {
 });
 
 router.get('/featured', (req, res, next) => {
-  
+
   Secret.findRandom({}, {}, {limit: 4}, function(err, results) {
     if (err) {
       return res.send(err);
@@ -63,8 +79,9 @@ router.get('/featured', (req, res, next) => {
       return res.json(results);
     }
   });
-
 });
+
+
 
 
 module.exports = router;

@@ -45,9 +45,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/', auth);
 // app.use('/api/profile',  profile);
-app.use('/api/secrets',  secrets);
+// app.use('/api/secrets',  secrets);
 app.use('/api/profile', passport.authenticate('jwt', { session: false }), profile);
-// app.use('/api/secrets', passport.authenticate('jwt', { session: false }), secrets);
+app.use('/api/secrets', passport.authenticate('jwt', { session: false }), secrets);
 
 
 // catch 404 and forward to error handler
