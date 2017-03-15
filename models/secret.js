@@ -5,7 +5,7 @@ const Schema   = mongoose.Schema;
 const secretSchema = new Schema({
   where       : String,
   location    : String,
-  what        : [String],
+  what        : String,
   description : String,
   tips        : String,
   when        : Date,
