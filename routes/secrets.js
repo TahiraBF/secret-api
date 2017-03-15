@@ -69,6 +69,7 @@ router.get('/search', (req, res, next) => {
 });
 
 router.get('/featured', (req, res, next) => {
+    console.log("backend secrets");
 
   Secret.findRandom({}, {}, {limit: 4}, function(err, results) {
     if (err) {
@@ -77,8 +78,22 @@ router.get('/featured', (req, res, next) => {
       return res.json(results);
     }
   });
-
 });
+
+router.get('/:id', (req, res) => {
+  var secretId = req.params.id;
+
+  Secret.findById(secretId, (err, secret) => {
+    if (err) {
+      return res.send(err);
+    }
+    else {
+    return res.json(secret);
+  }
+    });
+});
+
+
 
 
 module.exports = router;
