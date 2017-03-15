@@ -32,7 +32,7 @@ router.post('/add', upload.single('file'), (req, res, next) => {
     tips        : req.body.tips,
     when        : req.body.when,
     image       : `/uploads/${req.file.filename}`,
-    user        : req.user._id
+    user        : req.user
   });
 
 
@@ -40,6 +40,7 @@ router.post('/add', upload.single('file'), (req, res, next) => {
     if (err) {
       res.status(400).json({ message: err });
     } else {
+      console.log("secret user", req.user);
       return res.json({ message: 'New secret created!' });
     }
   });
@@ -70,11 +71,14 @@ router.get('/featured', (req, res, next) => {
 router.get('/:id', (req, res) => {
   var secretId = req.params.id;
 
-  Secret.findById(secretId, (err, secret) => {
+  Secret.findById(secretId)
+    .populate("user")
+    .exec((err, secret) => {
     if (err) {
       return res.send(err);
     }
     else {
+      // console.log("secret user is ", secret);
     return res.json(secret);
   }
     });
