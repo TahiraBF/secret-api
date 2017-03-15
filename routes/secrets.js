@@ -19,6 +19,24 @@ router.get('/', (req, res, next) => {
     });
 });
 
+router.put('/', (req, res, next) => {
+  var secretId = req.body._id;
+  var secret   = req.body.secret;
+
+  Secret.findByIdAndUpdate(secretId, {
+    where      : req.body.where,
+    location   : req.body.location,
+    what       : req.body.what,
+    description: req.body.description,
+    tips       : req.body.tips,
+  }, (err) => {
+    if (err) {
+      return res.send(err);
+    }
+  return res.json({message: "Secret updated successfully", secret: secret});
+});
+});
+
 router.get('/map', (req, res, next) => {
   var user = req.user._id;
 
