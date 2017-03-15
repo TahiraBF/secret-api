@@ -19,6 +19,18 @@ router.get('/', (req, res, next) => {
     });
 });
 
+router.get('/map', (req, res, next) => {
+  var user = req.user._id;
+
+  Secret.find({"user": user })
+    .exec((err, Secrets) => {
+      if (err) {
+        return res.send(err);
+      }
+      return res.json(Secrets);
+    });
+});
+
 
 router.post('/add', upload.single('file'), (req, res, next) => {
   // var userId = req.user._id;
@@ -35,6 +47,7 @@ router.post('/add', upload.single('file'), (req, res, next) => {
     user        : req.user
   });
 
+  console.log("loc:", addSecret.location);
 
   addSecret.save( (err) => {
     if (err) {
