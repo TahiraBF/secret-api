@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 const dbName = 'secret-place';
-
+require("dotenv").config();
 // connect to the database
-mongoose.connect(`mongodb://localhost/${dbName}`);
+mongoose.connect(process.env.MONGODB_URI);
 
 const db = mongoose.connection;
 

@@ -224,14 +224,23 @@ image: "https://www.google.es/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ah
   image: "http://www.chiangmailocator.com/design/photosbiz/chiang-mai-khunka-massage-145.jpg"
 },
 {
-where: "Thailand",
-location: "Bangkok",
-what: "Eat",
-description: "Coconut ice-cream that is quite easily the best thing I've put in my mouth. Ever! If you take the Golden Temple tour, outside the gates when you exit there is a little cafe which sells smooth coconut ice-cream with toppings. My favorite is topped with condensed milk and sweet red beans.",
-when: "February 2013",
-user: "58c7c75941d3c96be663e2fd",
-image: "http://images.budgettravel.com/thai-coconut-ice-cream-462015-175519_panoramic.jpeg"
-}
+  where: "Thailand",
+  location: "Bangkok",
+  what: "Eat",
+  description: "Coconut ice-cream that is quite easily the best thing I've put in my mouth. Ever! If you take the Golden Temple tour, outside the gates when you exit there is a little cafe which sells smooth coconut ice-cream with toppings. My favorite is topped with condensed milk and sweet red beans.",
+  when: "February 2013",
+  user: "58c7c75941d3c96be663e2fd",
+  image: "http://images.budgettravel.com/thai-coconut-ice-cream-462015-175519_panoramic.jpeg"
+},
+  {
+    where: "The Rising Sun",
+    location: "Lynton EX35, England",
+    what: "A place to Eat",
+    description: "A traditional place with a non conventional menu. Excellent food and wine with great and local atmosphere. If you re lucky enough you can even catch a bit of the sun set light. Have a look at the village and take a walk around the village. If you take the road to the north side of it stop o your on a cliff to watch the sunset.",
+    when: "May 2014",
+    user: "58c7c75941d3c96be663e2fd",
+    image: "http://www.everythingexmoor.org.uk/uploads/image_store/images3/cs-0048-Rising-Sun,-Lynmouth.jpg"
+  }
 ];
 
 
