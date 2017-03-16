@@ -24,7 +24,7 @@ router.put('/', (req, res, next) => {
   var secret   = req.body.secret;
 
   Secret.findByIdAndUpdate(secretId, {
-    where      : req.body.where,
+    title      : req.body.title,
     location   : req.body.location,
     what       : req.body.what,
     description: req.body.description,
@@ -55,7 +55,7 @@ router.post('/add', upload.single('file'), (req, res, next) => {
   // console.log("user ", userid);
 
   const addSecret =  new Secret ({
-    where       : req.body.where,
+    title       : req.body.title,
     location    : req.body.location,
     what        : req.body.what,
     description : req.body.description,

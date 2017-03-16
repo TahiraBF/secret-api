@@ -3,7 +3,7 @@ var random     = require('mongoose-simple-random');
 const Schema   = mongoose.Schema;
 
 const secretSchema = new Schema({
-  where       : String,
+  title       : String,
   location    : String,
   what        : String,
   description : String,
