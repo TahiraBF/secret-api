@@ -320,7 +320,8 @@ var AddSecretComponent = (function () {
         this.mapsAPILoader = mapsAPILoader;
         this.ngZone = ngZone;
         this.uploader = new __WEBPACK_IMPORTED_MODULE_4_ng2_file_upload__["FileUploader"]({
-            url: "http://localhost:3000/api/secrets/add",
+            //  url: `http://localhost:3000/api/secrets/add`,
+            url: "https://the-secret-place.herokuapp.com/api/secrets/add",
             authToken: "JWT " + this.session.token
         });
         this.newSecret = {
@@ -329,7 +330,7 @@ var AddSecretComponent = (function () {
             what: " ",
             description: " ",
             tips: " ",
-            when: Date(),
+            when: " ",
         };
     }
     AddSecretComponent.prototype.ngOnInit = function () {
@@ -1171,7 +1172,8 @@ var ProfileComponent = (function () {
         this.session = session;
         this.router = router;
         this.uploader = new __WEBPACK_IMPORTED_MODULE_4_ng2_file_upload__["FileUploader"]({
-            url: "http://localhost:3000/api/profile",
+            // url: `http://localhost:3000/api/profile`,
+            url: "https://the-secret-place.herokuapp.com/api/profile",
             authToken: "JWT " + this.session.token
         });
         this.shouldShow = true;
@@ -2190,7 +2192,7 @@ module.exports = "<div class=\"cont\">\n<div class=\"jumbotron text-center\">\n 
 /***/ 635:
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Page Content -->\n<div class=\"container\">\n  <hr class=\"divider\">\n  <h2 class=\"text-center text-lg text-uppercase my-0\"> Your Secret Places </h2>\n  <hr class=\"divider\">\n\n  <router-outlet></router-outlet>\n    <!-- Page Header -->\n    <!-- <div class=\"row\">\n        <div class=\"col-lg-12\">\n            <h1 class=\"page-header\">Page Heading\n                <small>Secondary Text</small>\n            </h1>\n        </div>\n    </div> -->\n    <!-- /.row -->\n\n    <!-- Projects Row -->\n    <div class=\"row\">\n        <div class=\"col-xs-3 item\" *ngFor=\"let secret of secrets\">\n            <a href=\"#\">\n                <img class=\"img-responsive\" [src]=\"secret.image\" alt=\"\" class=\"imgpic\">\n            </a>\n            <h3>\n              <a [routerLink]=\"['/api/secrets/', secret._id]\">\n                {{ secret.title }}\n                  <span class=\"btn-label\"><small><i class=\"fa fa-pencil\"></i></small></span>\n              </a>\n            </h3>\n            <p> {{ secret.location }}</p>\n            <p> {{ secret.what }}</p>\n            <p> {{ secret.description }}</p>\n            <p> {{ secret.tips }}</p>\n            <p> {{ secret.when | date:'MMMM y' }}</p>\n        </div>\n    </div>\n    <!-- /.row -->\n\n\n<!-- <div *ngFor=\"let secret of secrets\" class=\"item\">\n  <div class=\"col-md-6 col-md-offset-3\">\n    <div class=\"panel panel-default\">\n      <div class=\"panel-body\">\n        <h3> {{ secret.title }} </h3>\n        <p> {{ secret.location }}</p>\n        <p> {{ secret.what }}</p>\n        <p> {{ secret.description }}</p>\n        <p> {{ secret.tips }}</p>\n        <p> {{ secret.when | date:'MMMM y' }}</p>\n        <img [src]=\"secret.image\" />\n        <a [routerLink]=\"['/api/secrets', secret._id]\"> View Secret </a>\n      </div>\n    </div>\n  </div>\n</div> -->\n"
+module.exports = "<!-- Page Content -->\n<div class=\"container\">\n  <hr class=\"divider\">\n  <h2 class=\"text-center text-lg text-uppercase my-0\"> Your Secret Places </h2>\n  <hr class=\"divider\">\n\n  <router-outlet></router-outlet>\n    <!-- Page Header -->\n    <!-- <div class=\"row\">\n        <div class=\"col-lg-12\">\n            <h1 class=\"page-header\">Page Heading\n                <small>Secondary Text</small>\n            </h1>\n        </div>\n    </div> -->\n    <!-- /.row -->\n\n    <!-- Projects Row -->\n    <div class=\"row\">\n        <div class=\"col-xs-3 item\" *ngFor=\"let secret of secrets\">\n            <a>\n                <img class=\"img-responsive\" [src]=\"secret.image\" alt=\"\" class=\"imgpic\">\n            </a>\n            <h3>\n              <a [routerLink]=\"['/api/secrets/', secret._id]\">\n                {{ secret.title }}\n                  <span class=\"btn-label\"><small><i class=\"fa fa-pencil\"></i></small></span>\n              </a>\n            </h3>\n            <p> {{ secret.location }}</p>\n            <p> {{ secret.when | date:'MMMM y' }}</p>\n            <p> {{ secret.what }}</p>\n            <p> {{ secret.description }}</p>\n            <p> {{ secret.tips }}</p>\n        </div>\n    </div>\n    <!-- /.row -->\n\n\n<!-- <div *ngFor=\"let secret of secrets\" class=\"item\">\n  <div class=\"col-md-6 col-md-offset-3\">\n    <div class=\"panel panel-default\">\n      <div class=\"panel-body\">\n        <h3> {{ secret.title }} </h3>\n        <p> {{ secret.location }}</p>\n        <p> {{ secret.what }}</p>\n        <p> {{ secret.description }}</p>\n        <p> {{ secret.tips }}</p>\n        <p> {{ secret.when | date:'MMMM y' }}</p>\n        <img [src]=\"secret.image\" />\n        <a [routerLink]=\"['/api/secrets', secret._id]\"> View Secret </a>\n      </div>\n    </div>\n  </div>\n</div> -->\n"
 
 /***/ }),
 
