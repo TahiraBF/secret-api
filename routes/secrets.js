@@ -90,17 +90,20 @@ router.get('/search', (req, res, next) => {
 router.get('/featured', (req, res, next) => {
     console.log("backend secrets");
 
-  Secret.findRandom({}, {}, {limit: 4}, function(err, results) {
+
+  Secret.find({}, function(err, result) {
     if (err) {
       return res.send(err);
     } else {
-      return res.json(results);
+      console.log("results is", result);
+      return res.json(result);
     }
   });
 });
 
 router.get('/:id', (req, res) => {
   var secretId = req.params.id;
+
 
   Secret.findById(secretId)
     .populate("user")

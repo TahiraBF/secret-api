@@ -69,19 +69,19 @@ const secrets = [
   tips: "This place is very hard to find online. If you can get access to their phone number, call them directly to book. Also, their address isn't on google maps so you'll need to call and ask for directions if it's your first time.",
   when: "September 2016",
   user: "58cb18d6140e350011b89c2d",
-  image: "https://www.google.es/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwjR6NC2yMzSAhUGthoKHQggDzUQjRwIBw&url=http%3A%2F%2Fwww.letstravelsometitle.com%2Ftravel-inspiration%2Fsandra-jordan-chefchaouen-morocco%2F&bvm=bv.149093890,d.d24&psig=AFQjCNE09XW_AXBuSOTB_Cvf3jo_p45RRg&ust=1489256896686697"
+  image: "https://media-cdn.tripadvisor.com/media/photo-s/0d/39/8e/be/dar-dadicilef.jpg"
   },
 
 
 {
 title: "Monte de San Anton",
-location: "Monte de San Anton, Getaria, Spain",
+location: "Getaria, Spain",
 what: "Viewpoint",
 description: "This short little hike up the San Anton mountain will without a doubt be worth the amazing views you get at the end. Located right next to the port, the top of the mountain gets you a 360 view surrounded by the sea and the town of Getaria. While the town of Getaria does get a good bit of tourists in peak summer time (while we were there), we didn't come across any tourists on this hike, just a few friendly locals as it's a good spot to bring dogs.",
 tips: "The path starts off as a road but eventually turns to gravel and dirt, so make sure you bring comfortable shoes!",
 when: "July 2016",
 user: "58cb18d6140e350011b89c2d",
-image: "https://www.google.es/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwjxrbHDyMzSAhWFrxoKHVrDDQ0QjRwIBw&url=https%3A%2F%2Fwinetourismspain.com%2F399%2Fgetaria-from-san-sebastian-wine-and-food-tour%2F&bvm=bv.149093890,d.d24&psig=AFQjCNEGlMCBvKlN_ObDycpxdSPzaBc4eQ&ust=1489256923033262"
+image: "http://www.northernspain.net/wp-content/uploads/2016/06/507B-2.png"
 },
 
 {
@@ -92,34 +92,34 @@ description: "Amazing little restaurant located in New Orleans, Louisiana. They 
 tips: "There could be a long wait during dinner time, make sure you get there early or be prepared to wait!",
 when: "December 2016",
 user: "58cb18d6140e350011b89c2d",
-image: "https://www.google.es/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwjStcegx8zSAhXJfRoKHWDrCDMQjRwIBw&url=http%3A%2F%2Fsetthetrotline.com%2F2012%2F04%2F02%2Fthe-best-burger-ive-ever-had%2F&psig=AFQjCNFOlH_8rUm78zoldlVIwJMXYeWMKg&ust=1489256556787555"
+image: "http://ollie.neglerio.com/wp-content/uploads/2012/02/port-of-call-new-orleans-0215.jpg"
 },
 
 {
 title: "Casa de Fado",
-location: "Casa de Fado, Lisbon, Portugal",
+location: "Lisbon, Portugal",
 what: "Place to Eat",
 description: "While I haven't seen them all, this has to be the best Fado house in Lisbon. Fado restaurants are popping up all over Lisbon, but this one has been around for a while and has a very authentic feel. Recommended to me by a friend from Lisbon, this one is strictly for locals and it's unusual to find a tourist here. Although they only had a few items on their menu, it was made up by the quality. The live Fado music is truly one of a kind here and it's a magical experience you need to see.",
 tips: "This restaurant is located in a sketchier corner of Alfama so beware at night! I've never been robbed going to this restaurant but I have heard that it happens from time to time.",
 when: "February 2014",
 user: "58cb18d6140e350011b89c2d",
-image: "https://www.google.es/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwjfobOnyMzSAhVGiRoKHVDiBzQQjRwIBw&url=https%3A%2F%2Fwww.tripadvisor.com%2FRestaurant_Review-g189106-d3847494-Reviews-Casa_De_Fados_Maria_Severa-Evora_Evora_District_Alentejo.html&bvm=bv.149093890,d.d24&psig=AFQjCNHK1iwrQii__t6mYXkhcGmINIsBCA&ust=1489256860984417"
+image: "https://lisbonxperiencedotcom.files.wordpress.com/2013/12/10-12-2013.png"
 },
 
 {
-title: "Rekondo",
-location: "Rekondo, San Sebastian, Spain",
+title: "Rezabal",
+location: "San Sebastian, Spain",
 what: "Place to Eat",
 description: "Hidden in the mountains, this \"sideria\" is truly one of a kind. It has an amazing view from the terrace and you get incredible views to go along with your meal. If you simply want a glass of wine and enjoy the sunset, they have a great bar that overlooks their orchards. Great place to go with kids as well!",
 tips: "This place is hard to reach so you can only get there by car.",
 when: "June 2015",
 user: "58cb18d6140e350011b89c2f",
-image: "https://www.google.es/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwi_qKeCyMzSAhVCiRoKHdgTCzQQjRwIBw&url=https%3A%2F%2Facademiavascadegastronomia.com%2Frestaurante%2Frekondo%2F&bvm=bv.149093890,d.d24&psig=AFQjCNGze82Bgj-WoCSwWK5cb7Z8VUdaPg&ust=1489256771711435"
+image: "https://console.listae.com/files/2015/11/restaurante_rekondo_san_sebastian_terraza.jpg"
 },
 
 {
 title: "Hombres Gin",
-location: "Hombres Gin, Madrid, Spain",
+location: "Madrid, Spain",
 what: "Place to Drink",
 description: "Great little bar with the best cocktails in Madrid! They only place 80's Spanish music so be prepared for a flashback!",
 tips: "Thursdays are the best night to go. Avoid Saturdays as they get super packed!",
@@ -130,24 +130,24 @@ image: "http://thedrinknation.com/uploads/pdx%20gt.jpg"
 
 {
 title: "Koku Kitchen",
-location: "Koku Kitchen, Barcelona, Spain",
+location: "Barcelona, Spain",
 what: "Place to Eat",
 description: "Nice place to eat Japanese food in Barcelona. It's a small restaurant so it gets packed easily. On Fridays and Saturdays you can expect wait but it's well worth it!",
 tips: "There are two floors, the top floor is buns and the bottom floor is ramen. There are two different kitchens, however so you can only order from each floors respective kitchen. Make sure you check the menu before you sit.",
 when: "March 2017",
 user: "58cb18d6140e350011b89c2f",
-image: "https://www.google.es/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwjM9JTYx8zSAhVHQBoKHX5WBDQQjRwIBw&url=http%3A%2F%2Fwww.historiasdeunabstracto.com%2F%3Fp%3D4892&bvm=bv.149093890,d.d24&psig=AFQjCNGXm-7d-u2Pq8y4diiwvggGpG0R5A&ust=1489256693504482"
+image: "http://www.historiasdeunabstracto.com/wp-content/uploads/2014/06/miso-ramen-koku-kitchen.jpg"
 },
 
 {
 title: "El Dorado Bar",
-location: "El Dorado Bar, San Diego, USA",
+location: "San Diego, USA",
 what: "Place to Drink",
 description: "Cool little dive bar in the North Park neighborhood in San Diego. Great cocktails, cool music and nice atmosphere. They also have a patio area in the back so you can enjoy the terrific San Diego weather while you drink.",
 tips: "Even though the bar closes at 2am, they usually do last call at 1:30am.",
 when: "June 2016",
 user: "58cb18d6140e350011b89c2f",
-image: "https://www.google.es/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwiUm_7Jx8zSAhWCBBoKHSXSBzQQjRwIBw&url=http%3A%2F%2Fwww.sandiegoreader.com%2Fnews%2F2014%2Fjul%2F02%2Fblurt-el-dorado-rebrand%2F&bvm=bv.149093890,d.d24&psig=AFQjCNFePWdoLH3prGD0YDw4HYfxrWjFjg&ust=1489256671662342"
+image: "http://www.eldoradobar.com/images/ElDslider04.jpg"
 },
 
 {
@@ -158,7 +158,7 @@ description: "This outdoor picnic area sells raw oysters on the half shell so yo
 tips: "This place gets packed on Saturdays and Sundays and they have limited seating so be sure to get there by 10am or expect a wait of at least 2 hours. Everything is outdoors so not a good place to go if it's raining.",
 when: "May 2015",
 user: "58cb18d6140e350011b89c2f",
-image: "https://www.google.es/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwixocu_x8zSAhVKahoKHTGZBzQQjRwIBw&url=http%3A%2F%2Fwww.daytrippen.com%2Ftomales-bay-day-trip%2F&bvm=bv.149093890,d.d24&psig=AFQjCNE4BPQqfQIyf_OCI5mTS5mp3q_d8w&ust=1489256645461010"
+image: "https://unlostwanderer.files.wordpress.com/2014/01/picnic-table-in-front-of-bay-1280.jpg"
 },
 
 {
@@ -169,7 +169,7 @@ description: "Just on the other side of Manhatten in Brooklyn, there's a little 
 tips: "The neighborhood is a bit quiet so it's hard to find a place to eat or drink outside of work hours.",
 when: "January 2016",
 user: "58cb18d6140e350011b89c30",
-image: "https://www.google.es/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwiin-TZyMzSAhUCORoKHQHgATQQjRwIBw&url=https%3A%2F%2Fbrooklyncupcake.wordpress.com%2F2013%2F04%2F24%2Fnycs-best-kept-secret-dumbo%2Fdumbo-brooklyn-bridge-013%2F&bvm=bv.149093890,d.d24&psig=AFQjCNGFRGWG3gMbqQcdLMqaezmIIUK-dA&ust=1489256955255878"
+image: "https://media.cntraveler.com/photos/555b6bf9560358cc3c6eadd6/master/pass/dumbo-brooklyn-promenade-cr-alamy.jpg"
 },
 
 {
@@ -180,7 +180,7 @@ description: "Some of the best tacos you'll find in Texas. They have authentic O
 tips: "It's a taco truck so the location varies every day. Check their twitter (@dosamigostacotruck) to find out title they are that day.",
 when: "December 2016",
 user: "58cb18d6140e350011b89c30",
-image: "https://www.google.es/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwi2uq2vx8zSAhWIAxoKHdvaCDQQjRwIBw&url=http%3A%2F%2Fwww.lawyersgunsmoneyblog.com%2F2016%2F10%2Fa-wall-of-taco-trucks&bvm=bv.149093890,d.d24&psig=AFQjCNHoe2td-AS3K5xDs9Pwn5VVh36xYg&ust=1489256612209001"
+image: "https://img.wonkette.com/wp-content/uploads/2016/09/tacotruck.jpg"
 },
 
   {
@@ -223,7 +223,7 @@ image: "https://www.google.es/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ah
   tips: "The tuc-tuc ride should be no more than 20baht. Hire a scooter to see the rest of the island. Take a padlock for valuables as security is non-existent.",
   when: "February 2013",
   user: "58cb18d6140e350011b89c2e",
-  image: "http://www.chiangmailocator.com/design/photosbiz/chiang-mai-khunka-massage-145.jpg"
+  image: "https://media-cdn.tripadvisor.com/media/photo-s/09/f1/50/f8/lazy-days-bungalows.jpg"
 },
 {
   title: "Thai ice-cream",
@@ -240,20 +240,21 @@ image: "https://www.google.es/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ah
     what: "A place to Eat",
     description: "A traditional place with a non conventional menu. Excellent food and wine with great and local atmosphere. If you re lucky enough you can even catch a bit of the sun set light. Have a look at the village and take a walk around the village. If you take the road to the north side of it stop o your on a cliff to watch the sunset.",
     when: "May 2014",
-    user: "58cb18d6140e350011b89c2e",
+    user: "58cb18d6140e350011b89c2d",
     image: "http://www.everythingexmoor.org.uk/uploads/image_store/images3/cs-0048-Rising-Sun,-Lynmouth.jpg"
-  }
+  },
+  {
+    title: "Parque del Laberinto de Horta",
+    location: "Barcelona, Spain",
+    what: "Activity",
+    description: "The oldest park in Barcelona, this space is a true undiscovered gem. Built in 1791 by landowner Joan Antoni Desvalls of d'Ardena, it served as the center of many cultural events during the 19th century. The park extends over 9 hectares, with many hidden corners to explore, including waterfalls and sculptures of mythological figures. Plus, the park was named after its beautifully maintained maze (or labyrinth), which is a great place to literally get lost!",
+    when: "May 2012",
+    user: "58cb18d6140e350011b89c2f",
+    image: "http://www.conmishijos.com/assets/planes/1000/1206-parque-del-laberinto-de-horta.jpg"
+  },
 ];
 
 
-// const pictures = [
-//   {
-//     pic_path: '/uploads/1489009898799.JPG',
-//     pic_name: "luft",
-//   	user: "58bed614f23e9c706c604fbc",
-//     profile: true
-//   }
-// ];
 
 
 
@@ -262,7 +263,7 @@ image: "https://www.google.es/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ah
   //   mongoose.connection.close();
   // });
 
-// 
+//
 // User.create(users, (err, docs)=> {
 //   if (err){
 //     throw(err);}
